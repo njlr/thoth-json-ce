@@ -48,7 +48,7 @@ Install as a file using [Paket](https://fsprojects.github.io/Paket/):
 Add this line to your `paket.dependencies`:
 
 ```
-github njlr/thoth-json-ce Thoth.Json.CE.fs
+github njlr/thoth-json-ce src/Thoth.Json.CE.fs
 ```
 
 Add this line to your `paket.references`:

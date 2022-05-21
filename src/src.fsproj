@@ -5,7 +5,10 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="../Thoth.Json.CE.fs" />
+    <Compile Include="Thoth.Json.CE.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="*.fsproj; **\*.fs; **\*.fsi" PackagePath="fable\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\LICENSE.txt" Pack="true" PackagePath="LICENSE.txt"/>
