@@ -37,7 +37,13 @@ module Decode =
 
 ## Install
 
-Install using [Paket](https://fsprojects.github.io/Paket/).
+Install from NuGet:
+
+```bash
+paket add Thoth.Json.CE
+```
+
+Install as a file using [Paket](https://fsprojects.github.io/Paket/):
 
 Add this line to your `paket.dependencies`:
 

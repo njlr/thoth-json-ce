@@ -6,3 +6,4 @@ obj
 .fable
 fable_modules
 *.fs.js
+packages

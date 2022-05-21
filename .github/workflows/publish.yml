@@ -1,6 +1,8 @@
-name: Build
+name: Publish
 
-on: [ push, pull_request ]
+on:
+  push:
+    branches: [ master ]
 
 jobs:
 
@@ -18,10 +20,14 @@ jobs:
 
     - uses: actions/checkout@v2
 
-    - name: Build and test
+    - name: Build and Test
       run: |
         dotnet tool restore
         dotnet paket restore
-        dotnet build
+        dotnet build -c Release
         dotnet fable ./src
         dotnet run --project ./tests
+    - name: Publish
+      run: |
+        dotnet paket pack ./packages
+        dotnet nuget push ./packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{secrets.NUGET_API_KEY}} --skip-duplicate
