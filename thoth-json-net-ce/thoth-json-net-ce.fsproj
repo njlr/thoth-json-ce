@@ -5,13 +5,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Thoth.Json.CE.fs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="*.fsproj; **\*.fs; **\*.fsi" PackagePath="fable\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\LICENSE.txt" Pack="true" PackagePath="LICENSE.txt"/>
+    <Compile Include="../thoth-json-ce/Thoth.Json.CE.fs" />
   </ItemGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>

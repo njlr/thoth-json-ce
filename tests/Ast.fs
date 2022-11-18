@@ -4,11 +4,11 @@ open Expecto
 
 #if FABLE_COMPILER
 open Thoth.Json
+open Thoth.Json.CE
 #else
 open Thoth.Json.Net
+open Thoth.Json.Net.CE
 #endif
-
-open Thoth.Json.CE
 
 [<RequireQualifiedAccess>]
 type Ast =

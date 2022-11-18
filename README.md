@@ -5,11 +5,11 @@ Create `Thoth.Json` decoders using a Computation Expression.
 ```fsharp
 #if FABLE_COMPILER
 open Thoth.Json
+open Thoth.Json.CE
 #else
 open Thoth.Json.Net
+open Thoth.Json.Net.CE
 #endif
-
-open Thoth.Json.CE
 
 type Book =
   {
@@ -40,7 +40,11 @@ module Decode =
 Install from NuGet:
 
 ```bash
+# Fable
 paket add Thoth.Json.CE
+
+# .NET
+paket add Thoth.Json.Net.CE
 ```
 
 Install as a file using [Paket](https://fsprojects.github.io/Paket/):
@@ -48,7 +52,7 @@ Install as a file using [Paket](https://fsprojects.github.io/Paket/):
 Add this line to your `paket.dependencies`:
 
 ```
-github njlr/thoth-json-ce src/Thoth.Json.CE.fs
+github njlr/thoth-json-ce thoth-json-ce/Thoth.Json.CE.fs
 ```
 
 Add this line to your `paket.references`:

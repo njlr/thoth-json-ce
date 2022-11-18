@@ -25,7 +25,7 @@ jobs:
         dotnet tool restore
         dotnet paket restore
         dotnet build -c Release
-        dotnet fable ./src
+        dotnet fable ./thoth-json-ce
         dotnet run --project ./tests
     - name: Publish
       run: |
