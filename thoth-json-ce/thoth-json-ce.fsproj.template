@@ -1,6 +1,6 @@
 type project
 id Thoth.Json.CE
-version 0.1.3
+version 0.2.0
 authors github.com/njlr
 title Thoth.Json.CE
 tags fable fsharp json thoth
