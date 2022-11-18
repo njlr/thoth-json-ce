@@ -1,8 +1,10 @@
+#if FABLE_COMPILER
 module Thoth.Json.CE
 
-#if FABLE_COMPILER
 open Thoth.Json
 #else
+module Thoth.Json.Net.CE
+
 open Thoth.Json.Net
 #endif
 
