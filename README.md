@@ -3,6 +3,10 @@
 Create `Thoth.Json` decoders using a Computation Expression.
 
 ```fsharp
+#r "nuget: Thoth.Json.Net.CE"
+
+open System
+
 #if FABLE_COMPILER
 open Thoth.Json
 open Thoth.Json.CE
@@ -18,9 +22,9 @@ type Book =
     Year : int
   }
 
-module Decode =
+module Book =
 
-  let book =
+  let decode =
     decoder {
       let! id = Decode.field "id" Decode.guid
       let! title = Decode.field "title" Decode.string
@@ -33,6 +37,16 @@ module Decode =
           Year = year
         }
     }
+    
+"""
+{
+  "id": "f3394dca-1620-46a3-a850-ee2fc11f5b6c",
+  "title": "The Player of Games",
+  "year": "1988"
+}
+"""
+|> Decode.fromString Book.decode
+|> printfn "%A"
 ```
 
 ## Install
