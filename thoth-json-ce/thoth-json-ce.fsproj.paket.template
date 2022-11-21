@@ -1,6 +1,6 @@
 type project
 id Thoth.Json.CE
-version 0.2.0
+version 0.2.1
 authors github.com/njlr
 title Thoth.Json.CE
 tags fable fsharp json thoth
@@ -8,6 +8,9 @@ repositoryType git
 repositoryUrl https://github.com/njlr/thoth-json-ce
 files
   ../LICENSE.txt ==> LICENSE.txt
+  *.fsproj ==> fable
+  *.fs ==> fable
+  *.fsi ==> fable
 description Computation Expression for building Thoth.Json decoders
 summary Computation Expression for building Thoth.Json decoders
 licenseUrl https://licenses.nuget.org/MIT
